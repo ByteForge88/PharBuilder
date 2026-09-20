@@ -13,7 +13,7 @@ function downloadGitHubRepository(
     string $url,
     string $branch,
     string $destination
-): void {
+) : void{
     $url = trim($url);
     $url = rtrim($url, '/');
 
@@ -123,7 +123,7 @@ function downloadGitHubRepository(
     echo "Downloaded successfully.\n";
 }
 
-function findRepositoryRoot(string $directory): ?string {
+function findRepositoryRoot(string $directory) : ?string{
     if (!is_dir($directory)) {
         return null;
     }
@@ -149,7 +149,7 @@ function findRepositoryRoot(string $directory): ?string {
     return null;
 }
 
-function readDependencies(string $file): array {
+function readDependencies(string $file) : array{
     if (!file_exists($file)) {
         return [];
     }
@@ -318,7 +318,7 @@ function readDependencies(string $file): array {
     return $dependencies;
 }
 
-function readVirionVersion(string $file): string {
+function readVirionVersion(string $file) : string{
     if (!file_exists($file)) {
         throw new RuntimeException(
             "virion.yml not found: $file"
@@ -379,7 +379,7 @@ function addDirectoryToPhar(
     string $directory,
     string $pharPrefix,
     int &$fileCount
-): void {
+) : void{
     if (!is_dir($directory)) {
         return;
     }
@@ -444,7 +444,7 @@ function addDirectoryToPhar(
     }
 }
 
-function deleteDirectory(string $directory): void {
+function deleteDirectory(string $directory) : void{
     if (!is_dir($directory)) {
         return;
     }
