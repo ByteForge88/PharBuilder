@@ -13,9 +13,9 @@ Recently PocketMine-MP has stop updating along side their website Poggit. Poggit
 # Example dependencies.yml
 ```yml
 dependency:
-  - url: https://github.com/CortexPE/Commando
-    branch: master
-    version: 3.3.0
+  - url: https://github.com/ByteForge88/Command88
+    branch: stable
+    version: 1.0.0-ALPHA1
 
   - url: https://github.com/Example/ExampleRepo
     branch: main
